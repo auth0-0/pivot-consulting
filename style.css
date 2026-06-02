@@ -257,12 +257,33 @@ width:180px;
 height:180px;
 object-fit:cover;
 border-radius:50%;
-box-shadow:0 4px 12px rgba(0,0,0,0.15);
+box-shadow:0 8px 20px rgba(0,0,0,0.12);
 }
 
 .quote{
+position:relative;
 font-size:1.2rem;
 font-style:italic;
 line-height:1.8;
 margin-bottom:20px;
+padding-left:60px;
+}
+
+.quote::before{
+content:"“";
+position:absolute;
+left:0;
+top:-35px;
+font-size:6rem;
+font-weight:bold;
+color:#700018;
+opacity:0.25;
+line-height:1;
+}
+
+.testimonial{
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
