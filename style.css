@@ -1,289 +1,646 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+/* =============================================
+   RESET & BASE
+   ============================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-font-family:'Montserrat',sans-serif;
-background:white;
-color:#303136;
-line-height:1.6;
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: white;
+    color: #303136;
+    line-height: 1.8;
+    font-size: 1rem;
 }
 
-header{
-background:#303136;
-color:white;
+
+/* =============================================
+   HEADER & NAV
+   ============================================= */
+
+header {
+    background: #303136;
+    color: white;
 }
 
-.navbar{
-max-width:1200px;
-margin:auto;
-padding:20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo img{
-height:80px;
+.logo img {
+    height: 80px;
 }
 
-.menu{
-display:flex;
-gap:25px;
-list-style:none;
+.menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
 }
 
-.menu a{
-color:white;
-text-decoration:none;
-font-weight:500;
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    transition: opacity 0.2s;
 }
 
-.hero{
-max-width:1000px;
-margin:auto;
-padding:120px 20px;
-text-align:center;
+.menu a:hover {
+    opacity: 0.75;
 }
 
-.hero h1{
-font-size:3rem;
-margin-bottom:25px;
+
+/* =============================================
+   HERO (page d'accueil)
+   ============================================= */
+
+.hero {
+    max-width: 1000px;
+    margin: auto;
+    padding: 120px 20px;
+    text-align: center;
 }
 
-.hero p{
-font-size:1.2rem;
-max-width:800px;
-margin:auto;
-margin-bottom:40px;
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 25px;
 }
 
-.btn-primary{
-background:#700018;
-color:white;
-padding:15px 30px;
-border-radius:6px;
-text-decoration:none;
-display:inline-block;
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    opacity: 0.9;
 }
 
-.section{
-padding:100px 20px;
-max-width:1200px;
-margin:auto;
+
+/* =============================================
+   BOUTONS
+   ============================================= */
+
+.btn-primary {
+    background: #700018;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    transition: opacity 0.2s;
 }
 
-.section h2{
-text-align:center;
-margin-bottom:30px;
-font-size:2.2rem;
+.btn-primary:hover {
+    opacity: 0.88;
 }
 
-.intro{
-text-align:center;
-max-width:800px;
-margin:auto;
-margin-bottom:50px;
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    margin-top: 20px;
+    background: #1f3a5f;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    transition: opacity 0.2s;
 }
 
-.grey{
-background:#f5f5f5;
-max-width:none;
+.btn:hover {
+    opacity: 0.88;
 }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+
+/* =============================================
+   SECTIONS GÉNÉRALES
+   ============================================= */
+
+.section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.card{
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.05);
+.section h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: #303136;
 }
 
-.timeline{
-display:grid;
-gap:20px;
+/* Trait décoratif sous les h2 */
+.section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #700018;
+    margin: 12px auto 0;
+    border-radius: 2px;
 }
 
-.step{
-background:#fafafa;
-padding:25px;
-border-left:5px solid #700018;
+.section h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1f3a5f;
+    margin-bottom: 12px;
+    margin-top: 30px;
 }
 
-.results{
-margin-top:50px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+.section h3:first-child {
+    margin-top: 0;
 }
 
-.result{
-background:#700018;
-color:white;
-padding:30px;
-border-radius:10px;
-text-align:center;
+.intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto 50px;
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.9;
 }
 
-.result span{
-font-size:2rem;
-font-weight:bold;
+.grey {
+    background: #f5f5f5;
+    max-width: none;
 }
 
-.contact{
-text-align:center;
+.cta-container {
+    text-align: center;
+    margin-top: 30px;
 }
 
-footer{
-background:#303136;
-color:white;
-text-align:center;
-padding:50px;
+
+/* =============================================
+   CARDS
+   ============================================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
 }
 
-.team-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-margin-top:50px;
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-.team-card{
-background:white;
-padding:30px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-text-align:center;
+.card h3 {
+    font-size: 1.1rem;
+    color: #303136;
+    margin-top: 0;
 }
 
-.photo-placeholder{
-height:220px;
-background:#f2f2f2;
-border-radius:10px;
-display:flex;
-align-items:center;
-justify-content:center;
-margin-bottom:20px;
-font-weight:600;
-color:#777;
+
+/* =============================================
+   RÉSULTATS / KPIs
+   ============================================= */
+
+.results {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
 }
 
-.role{
-color:#700018;
-font-weight:600;
-margin-bottom:15px;
+.result {
+    background: #700018;
+    color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
 }
 
-.legal{
-margin-top:30px;
-padding-top:20px;
-border-top:1px solid rgba(255,255,255,0.2);
-font-size:0.85rem;
-line-height:1.8;
-max-width:1000px;
-margin-left:auto;
-margin-right:auto;
+.result span {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: -0.02em;
 }
 
-footer a{
-color:white;
-text-decoration:none;
+.result p {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: white;
+    opacity: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 4px;
 }
 
-.team-photo{
-width:100%;
-height:300px;
-object-fit:cover;
-border-radius:10px;
-margin-bottom:20px;
+
+/* =============================================
+   ÉQUIPE
+   ============================================= */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
 }
 
-.btn{
-    display:inline-block;
-    padding:12px 24px;
-    background:#1f3a5f;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
-    font-weight:600;
+.team-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
 }
 
-.btn{
-display:inline-block;
-padding:12px 24px;
-margin-top:20px;
-background:#1f3a5f;
-color:white;
-text-decoration:none;
-border-radius:6px;
-font-weight:600;
-transition:0.3s;
+.team-photo {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-.btn:hover{
-opacity:0.9;
+.team-card h3 {
+    font-size: 1.15rem;
+    color: #303136;
+    margin-top: 0;
+    margin-bottom: 4px;
 }
 
-.testimonial{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:50px;
-margin:60px 0;
+.role {
+    color: #700018;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
 }
 
-.testimonial.reverse{
-flex-direction:row-reverse;
+.photo-placeholder {
+    height: 220px;
+    background: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #777;
 }
 
-.testimonial-text{
-flex:3;
+
+/* =============================================
+   TÉMOIGNAGES
+   ============================================= */
+
+.testimonial {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 60px 0;
 }
 
-.testimonial-image{
-flex:1;
-text-align:center;
+.testimonial.reverse {
+    flex-direction: row-reverse;
 }
 
-.testimonial-image img{
-width:180px;
-height:180px;
-object-fit:cover;
-border-radius:50%;
-box-shadow:0 8px 20px rgba(0,0,0,0.12);
+.testimonial-text {
+    flex: 3;
 }
 
-.quote{
-position:relative;
-font-size:1.2rem;
-font-style:italic;
-line-height:1.8;
-margin-bottom:20px;
-padding-left:60px;
+.testimonial-text h3 {
+    font-size: 1.1rem;
+    color: #303136;
+    margin-top: 0;
+    margin-bottom: 2px;
 }
 
-.quote::before{
-content:"“";
-position:absolute;
-left:0;
-top:-35px;
-font-size:6rem;
-font-weight:bold;
-color:#700018;
-opacity:0.25;
-line-height:1;
+.testimonial-text p {
+    color: #777;
+    font-size: 0.95rem;
 }
 
-.testimonial{
-background:white;
-padding:40px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
+.testimonial-image {
+    flex: 1;
+    text-align: center;
+}
+
+.testimonial-image img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.quote {
+    position: relative;
+    font-size: 1.15rem;
+    font-style: italic;
+    line-height: 1.85;
+    margin-bottom: 20px;
+    padding-left: 60px;
+    color: #303136;
+}
+
+.quote::before {
+    content: "\201C";
+    position: absolute;
+    left: 0;
+    top: -35px;
+    font-size: 6rem;
+    font-weight: bold;
+    color: #700018;
+    opacity: 0.25;
+    line-height: 1;
+}
+
+
+/* =============================================
+   CONTACT
+   ============================================= */
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+    color: #555;
+}
+
+
+/* =============================================
+   FOOTER
+   ============================================= */
+
+footer {
+    background: #303136;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin-bottom: 6px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.legal {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.8rem;
+    line-height: 1.8;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.6;
+}
+
+
+/* =============================================
+   PAGE ÉTUDE DE CAS — SPÉCIFIQUE
+   ============================================= */
+
+/* Image devanture (entre header et hero) */
+.devanture img {
+    width: 100%;
+    display: block;
+    max-height: 480px;
+    object-fit: cover;
+}
+
+/* Hero de la page cas */
+.hero-cas {
+    background: #1f3a5f;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero-cas h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.25;
+}
+
+.hero-cas p {
+    font-size: 1.1rem;
+    max-width: 750px;
+    margin: 0 auto;
+    opacity: 0.88;
+    line-height: 1.85;
+}
+
+/* Présentation client */
+.client-presentation {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.client-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.client-text h2 {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.client-text h2::after {
+    margin: 12px 0 0;
+}
+
+.client-text p {
+    font-size: 1rem;
+    line-height: 2;
+    color: #444;
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.client-text p:last-child {
+    border-bottom: none;
+}
+
+.client-text strong {
+    color: #303136;
+    font-weight: 600;
+}
+
+.client-image {
+    flex: 1;
+    text-align: center;
+}
+
+.client-image img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Blocs texte + image (case-block) */
+.case-block {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin: 70px 0;
+    flex-wrap: wrap;
+}
+
+.case-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.case-image {
+    flex: 1;
+    text-align: center;
+}
+
+.case-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.case-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+/* Paragraphes dans les case-text */
+.case-text p {
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.9;
+    margin-bottom: 16px;
+}
+
+.case-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Listes dans la page cas */
+.section ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.section ul li {
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.8;
+    padding: 10px 0 10px 30px;
+    position: relative;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.section ul li:last-child {
+    border-bottom: none;
+}
+
+.section ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: #700018;
+    border-radius: 50%;
+}
+
+/* Sous-titres h3 dans les sections de la page cas */
+.section.grey h3,
+.section h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f3a5f;
+    margin-top: 40px;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #ebebeb;
+}
+
+.section.grey h3:first-child,
+.section h3:first-child {
+    margin-top: 0;
+}
+
+/* Paragraphes dans les sections grises */
+.section.grey p,
+.section p {
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.9;
+    margin-bottom: 16px;
+}
+
+/* Bloc ROI */
+.roi-block {
+    margin-top: 60px;
+    padding: 40px;
+    background: white;
+    border-left: 5px solid #700018;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.roi-block h3 {
+    font-size: 1.25rem;
+    color: #700018;
+    border-bottom: none;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.roi-block p {
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.roi-block p:last-child {
+    margin-bottom: 0;
 }
