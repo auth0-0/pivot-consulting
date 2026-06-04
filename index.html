@@ -8,6 +8,7 @@
     <title>Pivot Consulting – Transformation digitale pour les PME</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js"></script>
 </head>
 
 <body>
@@ -23,7 +24,7 @@
             <li><a href="#cabinet">Cabinet</a></li>
             <li><a href="#equipe">Notre équipe</a></li>
             <li><a href="#expertises">Expertises</a></li>
-            <li><a href="cas-bistrot-du-bonheur.html">Étude de cas</a></li>
+            <li><a href="bistrot-du-bonheur.html">Étude de cas</a></li>
             <li><a href="#temoignages">Témoignages</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -35,8 +36,10 @@
             Pivot Consulting accompagne les PME, commerces et organisations dans leurs projets
             de transformation digitale avec une approche pragmatique, humaine et orientée résultats.
         </p>
-        <a href=""
-           onclick="Calendly.initPopupWidget({url: 'https://calendly.com/pivotconsulting-contact/30min'}); return false;"
+        <a href="https://calendly.com/pivotconsulting-contact/30min"
+           onclick="if(typeof Calendly !== 'undefined'){ Calendly.initPopupWidget({url: 'https://calendly.com/pivotconsulting-contact/30min'}); return false; }"
+           target="_blank"
+           rel="noopener noreferrer"
            class="btn-primary">
             Prendre rendez-vous
         </a>
@@ -190,7 +193,7 @@
     </p>
 
     <div class="cta-container">
-        <a href="cas-bistrot-du-bonheur.html" class="btn">
+        <a href="bistrot-du-bonheur.html" class="btn">
             Découvrir l'étude de cas complète
         </a>
     </div>
@@ -238,8 +241,10 @@
     <h2>Contact</h2>
     <p>pivotconsulting.contact@gmail.com</p>
     <p>Prenons rendez-vous pour étudier votre projet.</p>
-    <a href=""
-       onclick="Calendly.initPopupWidget({url: 'https://calendly.com/pivotconsulting-contact/30min'}); return false;"
+    <a href="https://calendly.com/pivotconsulting-contact/30min"
+       onclick="if(typeof Calendly !== 'undefined'){ Calendly.initPopupWidget({url: 'https://calendly.com/pivotconsulting-contact/30min'}); return false; }"
+       target="_blank"
+       rel="noopener noreferrer"
        class="btn-primary">
         Prendre rendez-vous
     </a>
@@ -266,12 +271,16 @@
             Code APE : 7022Z –
             pivotconsulting.contact@gmail.com
         </p>
+
+        <p>
+    <a href="https://www.linkedin.com/in/pivot-consulting" target="_blank" rel="noopener noreferrer">
+        LinkedIn
+    </a>
+</p>
+
     </div>
 
 </footer>
-
-<!-- ========== CALENDLY ========== -->
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
 </body>
 </html>

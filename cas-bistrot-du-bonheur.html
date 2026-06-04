@@ -6,6 +6,7 @@
     <meta name="description" content="Découvrez comment Pivot Consulting a accompagné le Bistrot du Bonheur, chaîne de 8 bistrots parisiens, dans sa transformation digitale et opérationnelle : +30% de CA, ROI de 280% à 12 mois.">
     <title>Étude de cas - Bistrot du Bonheur | Pivot Consulting</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="https://assets.calendly.com/assets/external/widget.js"></script>
 </head>
 
 <body>
@@ -265,11 +266,13 @@
 
         <h2>Vous souhaitez obtenir des résultats similaires ?</h2>
         <p>Échangeons sur vos enjeux de transformation digitale.</p>
-        <a href=""
-       onclick="Calendly.initPopupWidget({url: 'https://calendly.com/pivotconsulting-contact/30min'}); return false;"
-       class="btn">
-        Prendre rendez-vous
-    </a>
+        <a href="https://calendly.com/pivotconsulting-contact/30min"
+           onclick="if(typeof Calendly !== 'undefined'){ Calendly.initPopupWidget({url: 'https://calendly.com/pivotconsulting-contact/30min'}); return false; }"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn">
+            Prendre rendez-vous
+        </a>
 
     </div>
 </section>
@@ -291,8 +294,6 @@
     </div>
 
 </footer>
-
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
 </body>
 </html>
